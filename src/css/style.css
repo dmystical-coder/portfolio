@@ -136,13 +136,15 @@ nav {
   }
   /* … */
   .header {
+    overflow: hidden;
+    display: block;
     width: 100%;
-    padding-top: 2.5rem;
+    padding: 2.5rem 0.5rem 5rem;
   }
 
   nav {
-    display: flex;
     width: inherit;
+    justify-content: space-between;
   }
 
   .logo {
@@ -155,7 +157,7 @@ nav {
     top: 6rem;
     left: 0;
     right: 0;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -179,6 +181,7 @@ nav {
   }
 
   .hamburger {
+    z-index: 1000;
     cursor: pointer;
     display: block;
   }
@@ -191,7 +194,9 @@ nav {
     font-size: 1.5rem;
   }
   .right-end {
-    display: none;
+    z-index: 999;
+    top: 0rem;
+    right: -1.5rem;
   }
   .left-end {
     display: none;
