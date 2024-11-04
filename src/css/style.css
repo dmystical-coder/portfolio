@@ -81,7 +81,8 @@ nav {
   bottom: -0.375rem;
 }
 
-.hamburger {
+.hamburger,
+.close {
   display: none;
 }
 
@@ -165,7 +166,7 @@ nav {
     border-bottom: 0.2rem solid #000;
     border-top: 0.2rem solid #000;
     font-size: 1rem;
-    background: inherit;
+    background: #fff;
     padding: 0.8rem;
   }
 
