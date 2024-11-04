@@ -1,19 +1,19 @@
 // navbar
 
-const hamburger = document.querySelector(".hamburger");
-const close = document.querySelector(".close");
+const showMenu = document.getElementById("show-menu");
+const hideMenu = document.getElementById("hide-menu");
 
 const navigationLinks = document.querySelector(".navigation-links");
-close.addEventListener('click', () => {
-    console.log('close');
-    hamburger.style.display = 'block';
-    close.style.display = 'none';
-    navigationLinks.classList.add('hidden');
-})
 
-hamburger.addEventListener('click', () => {
-    close.style.display = 'block';
-    close.style.zIndex = '1000';
-    hamburger.style.display = 'none';
-    navigationLinks.classList.remove('hidden');
-})
+showMenu.addEventListener("click", () => {
+    navigationLinks.classList.add("active");
+    showMenu.style.display = "none";
+    hideMenu.style.display = "block";
+
+});
+
+hideMenu.addEventListener("click", () => {
+    navigationLinks.classList.remove("active");
+    hideMenu.style.display = "none";
+    showMenu.style.display = "block";
+});
