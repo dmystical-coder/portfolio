@@ -152,6 +152,7 @@ nav {
   }
 
   .navigation-links {
+    background: inherit;
     width: 100%;
     position: absolute;
     top: 6rem;
