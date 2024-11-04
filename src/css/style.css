@@ -152,7 +152,6 @@ nav {
   }
 
   .navigation-links {
-    background: inherit;
     width: 100%;
     position: absolute;
     top: 6rem;
@@ -166,6 +165,7 @@ nav {
     border-bottom: 0.2rem solid #000;
     border-top: 0.2rem solid #000;
     font-size: 1rem;
+    background: inherit;
     padding: 0.8rem;
   }
 
