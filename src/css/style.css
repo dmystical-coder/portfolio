@@ -81,11 +81,6 @@ nav {
   bottom: -0.375rem;
 }
 
-.hamburger,
-.close {
-  display: none;
-}
-
 .logo {
   align-self: center;
   display: flex;
@@ -129,6 +124,10 @@ nav {
   position: absolute;
   left: 2.25rem;
   bottom: 0.5rem;
+}
+.hamburger,
+.close {
+  display: none;
 }
 
 @media (319px <= width <= 1023px) {
