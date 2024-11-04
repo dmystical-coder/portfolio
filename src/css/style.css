@@ -115,18 +115,34 @@ nav {
   font-size: 1.5rem;
 }
 
-.yellow {
-  text-decoration: underline;
-  text-decoration-color: #ffdc58;
-  text-decoration-thickness: 0.2rem;
-  text-underline-offset: 0rem;
+.bg-yellow {
+  z-index: 999;
+  position: relative;
 }
 
-@media (319px <= width <= 768px) {
+.yellow {
+  z-index: -1;
+  background: #ffdc58;
+  width: 6rem;
+  height: 0.5125rem;
+  position: absolute;
+  left: 2.25rem;
+  bottom: 0.5rem;
+}
+
+@media (319px <= width <= 1023px) {
+  .hidden {
+    display: none;
+  }
   /* … */
   .header {
     width: 100%;
     padding-top: 2.5rem;
+  }
+
+  nav {
+    display: flex;
+    width: inherit;
   }
 
   .logo {
@@ -154,10 +170,17 @@ nav {
     border-right: 0.25rem solid #000;
   }
 
+  .yellow {
+    width: 3.5625rem;
+    height: 0.3125rem;
+    position: absolute;
+    left: 1.2rem;
+    bottom: 0.3rem;
+  }
+
   .hamburger {
     cursor: pointer;
     display: block;
-    margin-right: 1rem;
   }
 
   .logo > img {
@@ -168,9 +191,7 @@ nav {
     font-size: 1.5rem;
   }
   .right-end {
-    right: -1rem;
-    width: 79px;
-    height: 70px;
+    display: none;
   }
   .left-end {
     display: none;
