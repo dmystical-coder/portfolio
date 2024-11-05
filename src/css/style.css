@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-  padding: 3.5rem 0 5rem;
+  padding: 1rem 0 1.2rem;
   position: relative;
   display: grid;
   place-content: center;
@@ -26,7 +26,7 @@ body {
 }
 .left-end {
   position: absolute;
-  top: 8rem;
+  top: 2rem;
   left: 0;
 }
 
@@ -164,12 +164,12 @@ nav {
 }
 
 main {
-  padding-block: 5rem;
+  padding-block: 2rem;
+  padding-inline: 7rem;
 }
 
 .avatar {
-  width: 150px;
-  border-radius: 50%;
+  width: 35%;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -182,9 +182,8 @@ main {
 .card {
   box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
     rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -205,17 +204,26 @@ main {
   padding-inline: 0.25rem;
 }
 
+.card h3 {
+  color: #000;
+  -webkit-text-stroke-width: 3;
+  -webkit-text-stroke-color: #000;
+  font-family: "Space Grotesk";
+  font-size: 4rem;
+}
+
 @media (319px <= width <= 1023px) {
   /* … */
   .header {
     overflow: hidden;
-    display: block;
+    display: flex;
     width: 100%;
     padding: 2.5rem 0.5rem;
   }
 
   nav {
-    width: inherit;
+    max-width: 500px;
+    width: 100%;
     justify-content: space-between;
   }
 
@@ -300,5 +308,13 @@ main {
     width: 100%;
     align-items: center;
     gap: 2rem;
+  }
+
+  .avatar {
+    width: 100%;
+  }
+
+  .card h3 {
+    font-size: 2rem;
   }
 }
