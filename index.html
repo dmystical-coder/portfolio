@@ -2,48 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="image/png" sizes="16x16" rel="icon" href="./src/assets/images/portfolio-doodle-16.png">
-    <link type="image/png" sizes="32x32" rel="icon" href="./src/assets/images/portfolio-doodle-32.png">
-    <link type="imae/png" sizes="96x96" rel="icon" href="./src/assets/images/portfolio-doodle-96.png">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" sizes="16x16" rel="icon" href="./src/assets/images/portfolio-doodle-16.png" />
+    <link type="image/png" sizes="32x32" rel="icon" href="./src/assets/images/portfolio-doodle-32.png" />
+    <link type="imae/png" sizes="96x96" rel="icon" href="./src/assets/images/portfolio-doodle-96.png" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <title>b.salam</title>
 </head>
 
 <body>
-    <div id="container">
+    <header class="header">
+        <img class="right-end" src="./src/assets/icons/star.svg" alt="" />
+        <img class="left-end" src="./src/assets/icons/star-two.svg" alt="" />
+        <nav>
+            <div class="top-left"></div>
+            <div class="top-right"></div>
+            <div class="bottom-left"></div>
+            <div class="bottom-right"></div>
+            <div class="logo">
+                <img src="./src/assets/images/logo.png" alt="" />
+                <span>b.salam</span>
+            </div>
+            <img class="menu-toggle" id="show-menu" src="./src/assets/icons/hamburger.svg" alt="" />
+            <img src="./src/assets/icons/close.svg" alt="" class="menu-toggle" id="hide-menu" style="display: none" />
 
-        <header class="header">
-            <img class="right-end" src="./src/assets/icons/star.svg" alt="">
-            <img class="left-end" src="./src/assets/icons/star-two.svg" alt="">
-            <nav>
-                <div class="top-left"></div>
-                <div class="top-right"></div>
-                <div class="bottom-left"></div>
-                <div class="bottom-right"></div>
-                <div class="logo">
-                    <img src="./src/assets/images/logo.png" alt="">
-                    <span>b.salam</span>
-                </div>
-                <img class="menu-toggle" id="show-menu" src="./src/assets/icons/hamburger.svg" alt="">
-                <img src="./src/assets/icons/close.svg" alt="" class="menu-toggle" id="hide-menu"
-                    style="display: none;">
+            <ul class="navigation-links">
+                <li><a href="#" class="navigation-link">About //</a></li>
+                <li class="bg-yellow">
+                    <a href="#" class="navigation-link">Portfolio</a>
+                    <div class="yellow"></div>
+                </li>
+                <li><a href="#" class="navigation-link">Hire Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                <ul class="navigation-links">
-                    <li><a href="#" class="navigation-link">About //</a></li>
-                    <li class="bg-yellow"><a href="#" class="navigation-link ">Portfolio</a>
-                        <div class="yellow"></div>
-                    </li>
-                    <li><a href="#" class="navigation-link">Hire Me</a></li>
-                </ul>
+    <footer class="footer">
+        <div class="footer-line-1">
+            <div class="logo">
+                <img src="./src/assets/images/logo.png" alt="" />
+                <span>b.salam</span>
+            </div>
+            <p>©️ 2024 Abdulsalam Baruwa</p>
+            <div class="socials">
+                <a href=""><img src="./src/assets/images/github-40.png" alt="" />
+                </a>
+                <a href=""><img src="./src/assets/images/linkedin-circled.gif" alt="" /></a>
+                <a href=""><img src="./src/assets/images/twitter-circled.gif" alt="" />
+                </a>
+            </div>
+        </div>
+        <span>Icons by
+            <a target="_blank" href="https://icons8.com">Icons8</a></span>
+    </footer>
 
-            </nav>
-        </header>
-    </div>
-    <a target="_blank" href="https://icons8.com/icon/Meg71w7epZVz/portfolio">Portfolio</a> icon by <a target="_blank"
-        href="https://icons8.com">Icons8</a>
     <script src="./src/js/app.js"></script>
 </body>
 
