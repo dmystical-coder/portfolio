@@ -233,8 +233,7 @@ main {
   color: #000;
   text-align: center;
   font-family: "Space Grotesk Bold";
-  font-size: 1.8125rem;
-  font-weight: 700;
+  font-size: 1.25rem;
   /* <!-- HTML !-->
 <button class="button-89" role="button">Button 89</button> */
 
@@ -249,7 +248,7 @@ main {
   --_p: var(--s);
   background: conic-gradient(
       from 90deg at var(--b) var(--b),
-      #bae6ff 90deg,
+      #ffdc58 90deg,
       var(--color) 0
     )
     var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
@@ -257,7 +256,7 @@ main {
   transition: 0.3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: 0.6em;
-  font-size: 16px;
+  /* font-size: 16px; */
 
   border: 0;
 
@@ -283,9 +282,10 @@ main {
 }
 
 .card svg {
+  width: 4rem;
   position: absolute;
   bottom: -3.5rem;
-  right: 11rem;
+  right: 10.2rem;
 }
 
 @media (319px <= width <= 1023px) {
@@ -402,7 +402,7 @@ main {
   .card svg {
     width: 3rem;
     position: absolute;
-    bottom: -3rem;
-    right: 2.5rem;
+    bottom: -3.2rem;
+    right: 1.5rem;
   }
 }
