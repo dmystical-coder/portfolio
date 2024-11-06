@@ -233,7 +233,6 @@ main {
   text-decoration: none;
   align-self: flex-start;
   display: inline-flex;
-  transform: rotate(0.543deg);
   /* padding: 1.875rem 3.4375rem; */
   justify-content: center;
   align-items: center;
@@ -271,6 +270,7 @@ main {
 
 .btn:hover,
 .btn:focus-visible {
+  transform: rotate(0.543deg);
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: 0.05em;
@@ -286,6 +286,131 @@ main {
   position: absolute;
   bottom: -3.3rem;
   left: 10.8rem;
+}
+
+#portfolio {
+  margin-block: 4rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading > svg {
+  width: 7rem;
+}
+.heading > h3 {
+  position: relative;
+  color: #000;
+  -webkit-text-stroke-width: 3;
+  -webkit-text-stroke-color: #000;
+  font-family: "Space Grotesk SemiBold";
+  font-size: 3rem;
+}
+
+.heading h3 svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  --b: 6.281px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #000;
+
+  /* padding: calc(0.5em + var(--s)) calc(0.9em + var(--s)); */
+  padding: 2rem;
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #fff 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  border: 0;
+  background-color: #fff;
+}
+
+.project-img {
+  width: 100%;
+  height: 18rem;
+  border: 4.416px solid #000;
+  background: url("../assets/images/project-img-1.png") lightgray 3.343px
+    1.412px / 100% 181.161% no-repeat;
+  background-size: cover;
+}
+
+.project-desc {
+  width: 100%;
+  display: flex;
+  flex-direction: space-between;
+  gap: 4rem;
+}
+
+.desc-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.desc-links {
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.desc-links a:first-of-type {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.25788rem 0.34444rem 0.33638rem 0.25813rem;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  box-shadow: 2.358px 2.358px 0px 0px #8e8f87;
+}
+
+.desc-content > h4 {
+  font-size: 2rem;
+  font-family: "Space Grotesk SemiBold";
+}
+
+.desc-content > p {
+  font-size: 1.5rem;
+  font-family: "Space Grotesk Medium";
+}
+
+.tags {
+  display: flex;
+  gap: 1rem;
+}
+
+.tags > span {
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border: 1px solid #262626;
+  border-radius: 0.175rem;
+  background: #bae6ff;
+  color: #000;
+  font-family: "Space Grotesk Medium";
+  font-size: 0.8125rem;
 }
 
 .contact-card {
@@ -481,6 +606,58 @@ main {
     position: absolute;
     bottom: -3.5rem;
     left: 8.4rem;
+  }
+
+  #portfolio {
+    margin-block: 2rem;
+  }
+
+  .heading > h3 {
+    font-size: 1.5rem;
+  }
+
+  .heading h3 > svg {
+    width: 8rem;
+    position: absolute;
+    bottom: -0.2rem;
+    right: 0;
+  }
+
+  .heading > svg {
+    width: 4rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .project {
+    gap: 1rem;
+  }
+
+  .project-img {
+    height: 12rem;
+    border: 2px solid #000;
+    background: url("../assets/images/project-img-1-mobile.png") lightgray
+      1.965px 0.83px / 100% 181.161% no-repeat;
+    background-size: cover;
+  }
+
+  .project-desc {
+    gap: 1rem;
+  }
+
+  .desc-content {
+    flex-basis: 80%;
+  }
+
+  .desc-content > h4 {
+    font-size: 1.5rem;
+  }
+
+  .desc-content > p {
+    font-size: 1rem;
   }
 
   .contact-card {
