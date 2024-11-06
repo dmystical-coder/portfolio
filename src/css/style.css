@@ -33,7 +33,7 @@ body {
 nav {
   position: relative;
   display: inline-flex;
-  padding: 0.375rem 1rem;
+  padding: 0.375rem 0 0.375rem 1rem;
   justify-content: space-around;
   align-items: center;
   gap: 6rem;
@@ -106,6 +106,12 @@ nav {
   font-size: 1.5rem;
 }
 
+.navigation-link:hover {
+  background: #000;
+  color: #fff;
+  transition: 0.3s linear, color 0.5s, background-color 0.5s;
+}
+
 .bg-yellow {
   z-index: 999;
   position: relative;
@@ -125,47 +131,69 @@ nav {
   cursor: pointer;
 }
 
-.footer {
-  padding: 2rem 0 1rem;
-  margin-top: 10rem;
-  border-top: 0.375rem solid #000;
-  background-color: #fefff0;
-}
-
-.footer-line-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10rem;
-}
-
-.footer-line-1 p {
-  color: #000;
-  text-align: center;
-  font-family: "Space Grotesk Medium";
-  font-size: 2rem;
-}
-
-.socials {
-  display: flex;
-  align-items: flex-start;
-  gap: 2.5rem;
-}
-
-.socials a {
-  text-decoration: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
 main {
   padding-block: 2rem;
   padding-inline: 7rem;
 }
 
+.card {
+  display: flex;
+  padding: 3rem 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  /*  */
+  filter: drop-shadow(2px 4px 0px #000);
+  background: #fff;
+  color: #2b2839;
+  /* border-bottom: 6px solid #d8cefe; */
+  border-radius: 0.875rem;
+}
+.label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label > p {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: "Space Grotesk Medium";
+}
+.live {
+  border-radius: 0.875rem;
+  border: 1px solid #262626;
+  background: #bae6ff;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.live > span {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  font-family: "Space Grotesk Medium";
+}
+
+.second-layer {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-img {
+  flex-basis: 40%;
+}
+
 .avatar {
-  width: 35%;
+  width: 100%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -175,54 +203,31 @@ main {
     rgb(255, 255, 255) 10px -10px 0px -3px, #2b2839 10px -10px,
     rgb(255, 255, 255) 20px -20px 0px -3px;
 }
-
-.card {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  /*  */
-  filter: drop-shadow(2px 4px 0px #000);
-  padding: 1.5rem;
+.second-layer > div:last-of-type {
+  position: relative;
+  flex-basis: 60%;
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  background: #fff;
-  color: #2b2839;
-  /* border-bottom: 6px solid #d8cefe; */
-  border-radius: 8px;
-  /*
-    Challenge:
-    Find a color palette you like on Coolors.co
-    and use it in your business card.
-     */
+  flex-direction: column;
+  gap: 1.5rem;
 }
-
-.card p,
-.card h4 {
-  color: #000;
-  text-shadow: 0px 4px 0px rgba(231, 231, 231, 0.32);
-  font-family: "Space Grotesk Bold";
-  font-size: 1.8125rem;
-}
-
-.footer .logo {
-  padding-inline: 0.25rem;
-}
-
-.card h3 {
+.second-layer h3 {
   color: #000;
   -webkit-text-stroke-width: 3;
   -webkit-text-stroke-color: #000;
+  font-family: "Space Grotesk SemiBold";
+  font-size: 3rem;
+}
+
+.second-layer p {
+  color: #000;
+  text-shadow: 0px 4px 0px rgba(231, 231, 231, 0.32);
   font-family: "Space Grotesk Regular";
-  font-size: 4rem;
+  font-size: 1.5rem;
 }
 
-.card h4 {
-  margin-bottom: 1.5rem;
-}
-
-.card a {
+.btn {
+  text-decoration: none;
+  align-self: flex-start;
   display: inline-flex;
   transform: rotate(0.543deg);
   /* padding: 1.875rem 3.4375rem; */
@@ -234,12 +239,10 @@ main {
   text-align: center;
   font-family: "Space Grotesk Bold";
   font-size: 1.25rem;
-  /* <!-- HTML !-->
-<button class="button-89" role="button">Button 89</button> */
 
   /* CSS */
 
-  --b: 3px; /* border thickness */
+  --b: 4px; /* border thickness */
   --s: 0.45em; /* size of the corner */
   --color: #000;
 
@@ -248,7 +251,7 @@ main {
   --_p: var(--s);
   background: conic-gradient(
       from 90deg at var(--b) var(--b),
-      #ffdc58 90deg,
+      #bae6ff 90deg,
       var(--color) 0
     )
     var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
@@ -256,10 +259,7 @@ main {
   transition: 0.3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: 0.6em;
-  /* font-size: 16px; */
-
   border: 0;
-
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -277,15 +277,32 @@ main {
   color: #fff;
 }
 
-.card > div {
-  position: relative;
+.marks {
+  width: 3rem;
+  position: absolute;
+  bottom: -3.3rem;
+  left: 10.8rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-top: 0.375rem solid #000;
+  background-color: #fefff0;
 }
 
-.card svg {
-  width: 4rem;
-  position: absolute;
-  bottom: -3.5rem;
-  right: 10.2rem;
+.footer .logo {
+  padding-inline: 0.25rem;
+}
+
+.footer p {
+  color: #000;
+  text-align: center;
+  font-family: "Space Grotesk Medium";
+  font-size: 2rem;
 }
 
 @media (319px <= width <= 1023px) {
@@ -298,6 +315,7 @@ main {
   }
 
   nav {
+    padding-right: 1rem;
     max-width: 500px;
     width: 100%;
     justify-content: space-between;
@@ -320,7 +338,7 @@ main {
 
   .navigation-links.active {
     display: flex;
-  } /* … */
+  }
 
   .yellow {
     width: 3.5625rem;
@@ -361,48 +379,52 @@ main {
     display: none;
   }
 
-  .footer {
-    margin-top: 5rem;
-  }
-
-  .footer-line-1 {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .footer-line-1 p {
-    font-size: 1.25rem;
-  }
-  .socials {
-    gap: 1.5rem;
-  }
-
   main {
     padding-inline: 1rem;
   }
   .card {
-    padding-block: 2rem;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 2rem;
   }
 
-  .avatar {
-    width: 100%;
+  .label {
+    flex-direction: column;
+    gap: 1rem;
+    /* align-items: flex-start; */
   }
 
-  .card h3 {
-    font-size: 2rem;
+  .second-layer {
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .card h4 {
-    margin-bottom: 0.5rem;
+  .second-layer > div:last-of-type {
+    text-align: center;
+    gap: 1rem;
   }
 
-  .card svg {
-    width: 3rem;
+  .second-layer h3 {
+    font-size: 1.5rem;
+  }
+
+  .second-layer p,
+  .btn {
+    font-size: 1rem;
+  }
+
+  .btn {
+    align-self: center;
+  }
+
+  .marks {
     position: absolute;
-    bottom: -3.2rem;
-    right: 1.5rem;
+    bottom: -3.5rem;
+    left: 15rem;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer p {
+    font-size: 1.25rem;
   }
 }
