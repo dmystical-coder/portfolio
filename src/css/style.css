@@ -496,6 +496,8 @@ main {
 @media (319px <= width <= 1023px) {
   /* … */
   .header {
+    padding-inline: 0.875rem;
+    padding-block: 1rem;
     overflow: hidden;
     display: flex;
     width: 100%;
@@ -558,7 +560,7 @@ main {
     font-size: 1.5rem;
   }
   .right-end {
-   display: none;
+    display: none;
   }
   .left-end {
     display: none;

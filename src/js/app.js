@@ -14,7 +14,7 @@ showMenu.addEventListener("click", () => {
 
 hideMenu.addEventListener("click", () => {
     navigationLinks.classList.remove("active");
-    header.style.paddingBottom = "2.5rem";
+    header.style.paddingBottom = "1rem";
     hideMenu.style.display = "none";
     showMenu.style.display = "block";
 });
