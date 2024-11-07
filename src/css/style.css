@@ -499,7 +499,6 @@ main {
     overflow: hidden;
     display: flex;
     width: 100%;
-    padding: 2.5rem 0.5rem;
   }
 
   nav {
@@ -559,9 +558,7 @@ main {
     font-size: 1.5rem;
   }
   .right-end {
-    z-index: 999;
-    top: 0rem;
-    right: -1.5rem;
+   display: none;
   }
   .left-end {
     display: none;
@@ -628,6 +625,7 @@ main {
   }
 
   .heading > svg {
+    height: 4rem;
     width: 4rem;
   }
 
