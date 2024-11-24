@@ -631,7 +631,7 @@ main {
   .heading h3 > svg {
     width: 8rem;
     position: absolute;
-    bottom: -0.2rem;
+    bottom: 0;
     right: 0;
   }
 
